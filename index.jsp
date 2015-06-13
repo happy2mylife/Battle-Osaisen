@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BattleHack GetStarted</title>
+<title>BattleHack GetStarted teset</title>
 </head>
 <body>
 <h1>Welcome To FREMA</h1>
