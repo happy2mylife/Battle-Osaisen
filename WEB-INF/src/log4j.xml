@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+
+<!--
+    Version 1.1  2015/06/09  T.Hayashi  MOD: Log level
+ -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+       <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern" value="%d %-5p %c.%M:%L - %m%n"/>
+       </layout>
+    </appender>
+
+    <!-- specify the logging level for loggers from other libraries -->
+    <!-- VER1.1 MOD S
+    <logger name="com.opensymphony">
+    	<level value="DEBUG" />
+    </logger>
+    -->
+    <logger name="com.opensymphony">
+        <level value="INFO" />
+    </logger>
+    <!-- VER1.1 MOD E -->
+
+    <!-- VER1.1 MOD E
+    <logger name="org.apache.struts2">
+    	 <level value="DEBUG" />
+    </logger>
+    -->
+    <logger name="org.apache.struts2">
+         <level value="INFO" />
+    </logger>
+    <!-- VER1.1 MOD E -->
+
+   <!-- for all other loggers log only debug and above log messages -->
+     <root>
+        <priority value="INFO"/>
+        <appender-ref ref="STDOUT" />
+     </root>
+
+</log4j:configuration>
+

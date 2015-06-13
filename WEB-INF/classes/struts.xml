@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!--
+Version 1.1  2015/05/28  T.Hayashi  ADD: Measure to Japanese letter change
+        1.3  2015/06/12  T.Hayashi  ADD: purchase action
+ -->
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+    <!-- VER1.1 ADD S -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <!-- VER1.1 ADD E -->
+	<package name="basicstruts2" extends="struts-default">
+
+        <!-- If no class attribute is specified the framework will assume success and
+        render the result index.jsp -->
+        <!-- If no name value for the result node is specified the success value is the default -->
+		<action name="index">
+			<result>index.jsp</result>
+		</action>
+
+		<!-- If the URL is hello.action the call the execute method of class HelloWorldAction.
+		If the result returned by the execute method is success render the HelloWorld.jsp -->
+		<action name="hello" class="org.battlehack.helloworld.action.HelloWorldAction" method="execute">
+			<result name="success">/jsp/HelloWorld.jsp</result>
+		</action>
+
+        <action name="checkout" class="org.battlehack.checkout.action.CheckoutAction">
+            <result name="success">/jsp/checkedout.jsp</result>
+        </action>
+        <!-- VER1.3 ADD S -->
+        <action name="purchase" class="org.battlehack.purchase.action.PurchaseAction">
+            <result name="success">/jsp/purchased.jsp</result>
+        </action>
+        <!-- VER1.3 ADD E -->
+	</package>
+
+</struts>
