@@ -9,7 +9,7 @@ package org.battlehack.util;
 /**
  * This class contains constant values
  * @author  T.Hayashi
- * @version 1.0, 2010/06/01
+ * @version 1.0, 2010/06/02
  */
 public class ConstantValues {
 
